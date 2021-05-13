@@ -1,0 +1,90 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/hn_orange</item>
+        <item name="colorPrimaryDark">@color/hn_orange_dark</item>
+        <item name="colorAccent">@color/hn_orange_lighter</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/hn_orange</item>
+        <item name="colorPrimaryDark">@color/hn_orange_dark</item>
+        <item name="colorAccent">@color/hn_orange_lighter</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogStyle</item>
+        <item name="android:itemTextAppearance">@style/OptionsMenuTextColor</item>
+        <item name="android:textColorPrimary">@color/black_87pc</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>-->
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/black_87pc</item>
+        <item name="drawerArrowStyle">@style/HamburgerIconStyle</item>
+        <item name="android:itemTextAppearance">@style/OptionsMenuTextColor</item>
+    </style>
+
+    <style name="OptionsMenuTextColor" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowTitleStyle">@style/DialogTitleText</item>
+        <item name="colorAccent">@color/hn_orange_lighter</item>
+    </style>
+
+    <style name="DialogTitleText">
+        <item name="android:textColor">@color/black_87pc</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="HamburgerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="Widget" />
+
+    <style name="Widget.SampleMessage">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <style name="Widget.SampleMessageTile">
+        <item name="android:background">@drawable/app_logo</item>
+        <item name="android:shadowColor">#7F000000</item>
+        <item name="android:shadowDy">-3.5</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="Theme.UserDialog" parent="android:style/Theme.Dialog">
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:windowBackground">@drawable/bg_dialog</item>
+    </style>
+    <style name="Theme.CustomActivityDialog" parent="android:style/Theme.Dialog">
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Travel.Driver.DriverActivity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:elevation="1dp">
+    </com.google.android.gms.maps.MapView>
+    <include
+        android:id="@+id/header"
+        layout="@layout/app_header_driver">
+    </include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:layout_marginRight="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:elevation="2dp"
+        android:background="@drawable/one_round_border_orange_white_bg"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingLeft="60dp"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_are_offline"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="@font/fira_sans_extra_bold">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_online_to_start_accepting_jobs"
+            android:textColor="@color/colorSecond"
+            android:textSize="20sp"
+            android:fontFamily="@font/fira_sans_regular">
+        </TextView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_driver_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="50dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="-70dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Mart Banks"
+                android:fontFamily="@font/fira_sans_medium"
+                android:textSize="24sp"
+                android:layout_alignParentEnd="true"/>
+            <RatingBar
+                android:id="@+id/rb_driver_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:rating="4.5"
+                android:progressTint="@color/colorSecond"
+                android:indeterminateTint="@color/colorSecond"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="70dp"
+                android:stepSize="0.5"
+                style="@style/Widget.AppCompat.RatingBar.Indicator">
+            </RatingBar>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/ic_car">
+            </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rb_driver_rating"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="07"
+                        android:fontFamily="@font/fira_sans_medium"
+                        android:textSize="24sp"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/hours_online"
+                        android:fontFamily="@font/fira_sans_light"
+                        android:textSize="24sp"
+                        android:layout_alignParentEnd="true"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="20"
+                        android:fontFamily="@font/fira_sans_medium"
+                        android:textSize="24sp"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/total_jobs"
+                        android:fontFamily="@font/fira_sans_light"
+                        android:textSize="24sp"
+                        android:layout_alignParentEnd="true"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/profile_4"
+        android:layout_above="@+id/card_driver_info"
+        android:layout_marginLeft="60dp"
+        app:civ_border_width="1dp"
+        android:elevation="5dp"
+        android:layout_marginBottom="-90dp"
+        app:civ_border_color="@color/colorSecond">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorSecond"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/fab_add"
+        android:layout_above="@+id/card_driver_info"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_location"
+        app:rippleColor="@color/white" />
+</RelativeLayout>
+
+
+
+
+
+
+/////////////////
+
+
+
+//////////////
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //Firebase
+    implementation 'com.google.firebase:firebase-core:11.6.2'
+    implementation 'com.google.firebase:firebase-auth:11.6.2'
+    implementation 'com.firebase:firebase-client-android:2.5.2+'
+    implementation 'com.google.firebase:firebase-messaging:11.6.2'
+    implementation 'com.firebase:geofire-java:3.0.0'
+
+    //Google Maps
+    implementation 'com.google.android.gms:play-services-places:11.6.2'
+    implementation 'com.google.android.gms:play-services:11.6.2'
+    implementation 'com.google.android.gms:play-services-maps:11.6.2'
+
+    
+    implementation 'com.android.volley:volley:1.1.0'
